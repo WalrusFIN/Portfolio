@@ -111,31 +111,55 @@ main {
 }
 
 // Studies
-.studies {
+.grid {
   display: grid;
-  grid-gap: 0.5rem;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 2fr 1fr;
 
-  div {
-    text-align: center;
-    border: 3px $secondary-color solid;
-    margin: 0rem 50vh;
-    @include easeOut;
+  .studies {
+    display: grid;
+    grid-gap: 0.8rem;
+    grid-template-rows: repeat(4, 1fr);
 
-    &:hover {
-      padding: 0.5rem 1.5rem;
-      background: $secondary-color;
-      color: set-text-color($secondary-color);
-      font-size: 20px;
+    .study {
+      text-align: center;
+      border: 3px $secondary-color solid;
+      padding: 1rem 0rem;
+      font-size: 15px;
+      height: 20vh;
+      width: 100vh;
+      @include easeOut;
 
-      .study-text {
-        visibility: visible;
+      h3 {
+        font-weight: bold;
+      }
+
+      &:hover {
+        padding: 0.5rem 1.5rem;
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+        font-size: 18px;
+        border: 3px $primary-color solid;
       }
     }
   }
 
-  .study-text {
-    visibility: hidden;
+  .info-box {
+    border: $secondary-color 3px solid;
+    width: 90vh;
+    justify-self: start;
+    display: none;
+
+    .text {
+      display: block;
+    }
+
+    .hideText {
+      display: none;
+    }
+  }
+
+  .showInfo {
+    display: block;
   }
 }
 

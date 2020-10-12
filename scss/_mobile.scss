@@ -65,6 +65,21 @@
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .info-box {
+      display: none;
+    }
+
+    .showInfo {
+      display: none;
+    }
+  }
 }
 
 // Smartphones
@@ -83,5 +98,20 @@
 
   .projects {
     grid-template-columns: 1fr;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .info-box {
+      display: none;
+    }
+
+    .showInfo {
+      display: none;
+    }
   }
 }
