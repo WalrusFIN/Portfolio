@@ -10,6 +10,8 @@ let showMenu = false;
 
 menuBtn.addEventListener("click", toggleMenu);
 
+
+
 function toggleMenu() {
   if (!showMenu) {
     menuBtn.classList.add("close");
@@ -31,3 +33,31 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+const info = document.querySelector(".info-box");
+const studies = document.querySelectorAll(".studies");
+
+// const text1 = document.querySelector(".text1");
+
+studies.forEach((item) => item.addEventListener("click", displayInfo));
+
+
+let showInfo = false;
+
+function displayInfo() {
+  if(!showInfo) {
+    info.classList.add("showInfo");
+    showInfo = true;
+  } else {
+    info.classList.remove("showInfo");
+    showInfo = false;
+  }
+
+//  text1.innerHTML = "whatever";
+//  text1.classList.add("showInfo");
+}
+
+
+
+
+
