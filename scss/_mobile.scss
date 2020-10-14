@@ -3,12 +3,20 @@
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .studies {
+    width: 100vh;
+  }
 }
 
 // Desktops and Laptops
 @include mediaLg {
   .projects {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .info-box {
+    display: none;
   }
 }
 
