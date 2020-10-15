@@ -113,12 +113,13 @@ main {
 // Studies
 .grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 50% 50%;
 
   .studies {
     display: grid;
     grid-gap: 0.8rem;
     grid-template-rows: repeat(4, 1fr);
+    margin-right: 1rem;
 
     .study {
       text-align: center;
@@ -126,12 +127,8 @@ main {
       padding: 1rem 0rem;
       font-size: 15px;
       height: 20vh;
-      width: 100%;
+      width: auto;
       @include easeOut;
-
-      h3 {
-        font-weight: bold;
-      }
 
       &:hover {
         padding: 0.5rem 1.5rem;
@@ -145,17 +142,24 @@ main {
 
   .info-box {
     border: $secondary-color 3px solid;
-    width: 80vh;
+    margin-left: 3rem;
     justify-self: start;
     display: none;
 
     .text {
       display: block;
+      text-align: center;
+      margin: 3rem;
+      font-size: 20px;
     }
 
     .hideText {
       display: none;
     }
+  }
+
+  h3 {
+    font-weight: bold;
   }
 
   .showInfo {
@@ -166,7 +170,7 @@ main {
 // Work/Projects
 .projects {
   display: grid;
-  grid-gap: 0.7rem;
+  grid-gap: 1.5rem;
   grid-template-columns: repeat(3, 1fr);
 
   img {

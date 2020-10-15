@@ -1,22 +1,47 @@
 // Widescreens
 @include mediaXl {
   .projects {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .studies {
-    width: 100vh;
+    width: auto;
   }
 }
 
 // Desktops and Laptops
 @include mediaLg {
   .projects {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .info-box {
-    display: none;
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .studies {
+      width: 100vh;
+    }
+
+    .info-box {
+      display: none;
+    }
+
+    .showInfo {
+      display: none;
+    }
   }
 }
 
@@ -60,16 +85,6 @@
     }
   }
 
-  .about-info {
-    grid-template-areas:
-      "bioimage"
-      "bio"
-      "job1"
-      "job2"
-      "job3";
-    grid-template-columns: 1fr;
-  }
-
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -79,6 +94,10 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+
+    .studies {
+      width: 100vh;
+    }
 
     .info-box {
       display: none;
