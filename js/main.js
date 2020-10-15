@@ -34,28 +34,54 @@ function toggleMenu() {
   }
 }
 
-const info = document.querySelector(".info-box");
-const studies = document.querySelectorAll(".studies");
 
-// const text1 = document.querySelector(".text1");
+const texts = document.querySelectorAll(".text"); 
 
-studies.forEach((item) => item.addEventListener("click", displayInfo));
-
-
-let showInfo = false;
-
-function displayInfo() {
-  if(!showInfo) {
-    info.classList.add("showInfo");
-    showInfo = true;
-  } else {
-    info.classList.remove("showInfo");
-    showInfo = false;
-  }
-
-//  text1.innerHTML = "whatever";
-//  text1.classList.add("showInfo");
+function hideAll() { 
+  texts.forEach((item) => item.classList.add("hideText"));
 }
+
+document.getElementById("study1").addEventListener("click", function() {
+  hideAll();
+  document.getElementById("text1").classList.remove("hideText");
+});
+
+document.getElementById("study2").addEventListener("click", function() {
+  hideAll();
+  document.getElementById("text2").classList.remove("hideText");
+});
+
+document.getElementById("study3").addEventListener("click", function() {
+  hideAll();
+  document.getElementById("text3").classList.remove("hideText");
+});
+
+document.getElementById("study4").addEventListener("click", function() {
+  hideAll();
+  document.getElementById("text4").classList.remove("hideText");
+});
+
+
+/*document.getElementById("study1").addEventListener("click", displayText("text1"));
+document.getElementById("study2").addEventListener("click", displayText("text2"));
+document.getElementById("study3").addEventListener("click", displayText("text3"));
+document.getElementById("study4").addEventListener("click", displayText("text4"));
+
+function displayText(name) {
+  hideAll();
+  document.getElementById(name).classList.remove("hideText");
+}*/ 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
