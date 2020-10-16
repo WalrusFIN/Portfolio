@@ -8,10 +8,11 @@
   @include easeOut;
 
   .btn-line {
-    width: 28px;
-    height: 3px;
+    width: 40px;
+    height: 5px;
     margin: 0 0 5px 0;
     background: set-text-color($primary-color);
+    background-color: $secondary-color;
     @include easeOut;
   }
 
@@ -22,7 +23,7 @@
     .btn-line {
       // Line 1 - Rotate
       &:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(6px, 6px);
       }
       // Line 2 - Hide
       &:nth-child(2) {
@@ -30,7 +31,7 @@
       }
       // Line 3 - Rotate
       &:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
+        transform: rotate(-45deg) translate(8px, -7px);
       }
     }
   }
@@ -124,9 +125,9 @@
   }
 }
 
-// Delay each nav item slide by 0.1s
-@for $x from 1 through 4 {
+// Delay each nav item slide by 0.2s
+@for $x from 1 through 5 {
   .nav-item:nth-child(#{$x}) {
-    transition-delay: $x * 0.1s;
+    transition-delay: $x * 0.2s;
   }
 }
